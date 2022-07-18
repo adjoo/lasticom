@@ -1,0 +1,89 @@
+@use "variables" as *
+
+//span 14 - auto - regular - dark_text
+.span
+  font-size: 1.4rem
+  line-height: 1
+  font-weight: $fs_regular
+//a inherit - inherit - inherit
+a
+  font-size: inherit
+  line-height: inherit
+  font-weight: inherit
+
+//strong inherit - inherit - bold - dark_text
+strong
+  font-size: inherit
+  line-height: inherit
+  font-weight: $fs_bold
+
+//p 14 - 150% - regular - dark_text
+p
+  max-width: 80ch
+  font-size: 1.4rem
+  line-height: 1.5
+  font-weight: $fs_regular
+
+//H1 48px - auto - semi - dark_text
+.h1
+  font-size: 6rem
+  line-height: 1.2
+  font-weight: $fs_semi
+
+//H2 36px - auto - semi - dark_text
+//.h2
+  font-size: 4rem
+  line-height: 1.2
+  font-weight: $fs_semi
+  @media (max-width: 767px)
+    font-size: 3rem
+  @media (max-width: 1199px)
+    font-size: 3.2rem
+  
+//H2 36px - auto - light - dark_text
+
+//H3 18 - 130% - semi - dark_text
+//.h3
+  font-size: 1.8rem
+  line-height: 1.3
+  font-weight: $fs_semi
+//H3 18 - 130% - semi - dark_text
+//.h3_r
+  font-size: 1.8rem
+  line-height: 1.3
+  font-weight: $fs_regular
+
+//H4 16 - 130% - light - dark_text
+.h4
+  font-size: 1.6rem
+  line-height: 1.2
+  font-weight: $fs_regular
+
+//H5 14 -130% - medium - dark_text
+//.h5
+  font-size: 1.4rem
+  line-height: 1.2
+  font-weight: $fs_med
+
+//description 11 -100% - regular - dark_text
+//.description
+  font-size: 1.1rem
+  line-height: 1
+  font-weight: $fs_regular
+
+//small 9 -100% - light - dark_text
+
+
+.uppercase
+  text-transform: uppercase
+
+.semi
+  font-weight: $fs_semi
+.bold
+  font-weight: $fs_bold
+.regular
+  font-weight: $fs_regular
+.extralight
+  font-weight: $fs_extralight
+.font_fira
+  font-family: $fontFira

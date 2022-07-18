@@ -1,0 +1,36 @@
+.transition
+  transition: all .2s ease
+  &:before, &:after, &>*
+    transition: all .2s ease
+  &:hover, &.active
+    transition: all .05s ease
+    &:before, &:after, &>*
+      transition: all .05s ease
+
+.transition_slow
+  transition: all .3s ease
+  &:before, &:after, &>*
+    transition: all .3s ease
+  &:hover, &.active
+    transition: all .1s ease
+    &:before, &:after, &>*
+      transition: all .1s ease
+
+.transition_fast
+  transition: all .05s ease
+  &:before, &:after, &>*
+    transition: all .05s ease
+  &:hover, &.active
+    transition: all .05s ease
+    &:before, &:after, &>*
+      transition: all .05s ease
+
+
+.transition_delay
+  transition-delay: .1s
+  &:before, &:after, &>*
+    transition-delay: .1s
+  &:hover, &.active
+    transition-delay: 0s
+    &:before, &:after, &>*
+      transition-delay: 0s

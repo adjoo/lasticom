@@ -1,0 +1,34 @@
+//все стили секции Хэдера
+@use "../base/variables" as *
+.header
+  display: flex
+  align-items: center
+  gap: 1em
+  padding: 3em 0
+.headerLogo
+
+.headerLogo_pic
+  width: 16em
+  height: 4em
+.headerLogo_description
+  font-size: 1.1em
+  font-family: $fontMonserrat
+  font-weight: $fs_regular
+.headerContacts
+  display: flex
+  gap: 1em
+  margin-left: 9em
+.headerContact_title
+  color: $text_c_100
+  font-size: 1.4em
+.headerContact_value
+  display: block
+  font-size: 1.6em
+  font-weight: $fs_semi
+  letter-spacing: .01em
+.headerContact_title+.headerContact_value
+  margin-top: .4em
+.headerAside
+  margin-left: auto
+
+
