@@ -36,6 +36,10 @@
   font-size: 5.5rem
   line-height: 1.225
   font-weight: $fw_semi
+  @media (max-width: $breakpoint-max-xl)
+    font-size: 5rem
+  @media (max-width: $breakpoint-max-lg)
+    font-size: 3rem
 
 .h2_l
   @extend .h2
@@ -47,7 +51,8 @@
   font-size: 2.4rem
   line-height: 1.225
   font-weight: $fw_semi
-
+  @media (max-width: $breakpoint-max-xl)
+    font-size: 1.8rem
 //H4 16 - auto - light - dark_text
 .h4
   font-size: 1.6rem
