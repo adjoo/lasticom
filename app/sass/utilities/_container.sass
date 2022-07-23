@@ -1,0 +1,41 @@
+@use "../base/variables" as *
+//основной контейнед для контента страницы(вместо бутстрап)
+
+.container
+  position: relative
+  z-index: 1
+  max-width: 100%
+  margin-left: auto
+  margin-right: auto
+  padding-left: $templateGap
+  padding-right: $templateGap
+  @media (min-width: $breakpoint-min-sm) //--breakpoint-sm
+    max-width: calc(#{$breakpoint-min-sm} - 2 * #{$templateGap})
+  @media (min-width: $breakpoint-min-md) //--breakpoint-md
+    max-width:  calc(#{$breakpoint-min-md} - 2 * #{$templateGap})
+  @media (min-width: $breakpoint-min-lg) //--breakpoint-lg
+    max-width:  calc(#{$breakpoint-min-lg} - 2 * #{$templateGap})
+  @media (min-width: $breakpoint-min-xl) //--breakpoint-xl
+    max-width: calc(#{$breakpoint-min-xl} - 2 * #{$templateGap})
+  @media (min-width: $breakpoint-min-xxl) //--breakpoint-xxl
+    max-width:  calc(#{$breakpoint-min-xxl} - 2 * #{$templateGap})
+  @media (min-width: $breakpoint-min-extra) //--breakpoint-extra
+    max-width: calc(#{$breakpoint-min-extra} - 2 * #{$templateGap})
+
+.row
+  display: flex
+
+  margin-left: -$templateGap
+  margin-right: -$templateGap
+.col
+  padding-left: $templateGap
+  padding-right: $templateGap
+
+.justify-between
+  justify-content: space-between
+.justify-center
+  justify-content: center
+.align-center
+  align-items: center
+.flexWrap
+  flex-wrap: wrap

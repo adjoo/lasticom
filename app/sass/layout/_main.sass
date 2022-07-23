@@ -1,9 +1,152 @@
 //все стили main
+@use "../base/variables" as *
 .main
-.mainTitle
-  margin-top: 15em
-.mainButton
-  margin-top: 7em
+.primary
+  margin-bottom: 7rem
+  min-height: 59rem
+  padding-left: 11.5rem
+  padding-top: 2rem
+  padding-bottom: 2rem
+  border-radius: 4rem
+  background: $active
+  background: linear-gradient(90deg, $active 45.83%, $accent 100%)
+  .row
+    min-height: inherit
+  width: 178rem
+  max-width: calc(100vw - 3rem)
+  @media (max-width: $breakpoint-max-extra)
+    padding-left: 5.5rem
+  @media (max-width: $breakpoint-max-xl)
+    padding-left: 3.5rem
+
+.primaryHeaders
+  color: $bg
+  min-height: inherit
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 73rem
+  max-width: 50%
+.primaryHeaders_description
+  line-height: 2em
+.primaryDecor
+  position: absolute
+  width: 100%
+  max-width: 50%
+  min-height: inherit
+  top: 0
+  right: 1rem
+  &>*
+    position: absolute
+    left: 0
+    top: 50%
+    //left: 50%
+    transform: translateY(-50%)
+.primaryDecor_layer1
+  @media (max-width: $breakpoint-max-xxl)
+    top: 45%
+  @media (max-width: $breakpoint-max-xl)
+    top: 40%
+
+.primaryDecor_layer2
+  @media (max-width: $breakpoint-max-xxl)
+    top: 55%
+  @media (max-width: $breakpoint-max-xl)
+    top: 60%
+
+//for mobile:
+@media (max-width: $breakpoint-max-lg)
+  .primary
+    min-height: unset
+    padding: 17rem 2rem 8rem
+    background-image: radial-gradient(ellipse 100% 50% at top,$accent 0%,$active 60%)
+    width: auto
+    max-width: calc(#{$breakpoint-min-lg} - 2 * #{$templateGap})
+    @media (max-width: $breakpoint-min-md)
+      padding: 17rem 2rem 13rem
+      margin-bottom: 13rem
+  .primaryHeaders
+    max-width: unset
+    margin: auto
+    min-height: unset
+    text-align: center
+    width: auto
+  .primaryDecor
+    min-height: unset
+    top: 15rem
+    left: 50%
+    transform: translateX(-50%) translateY(-100%)
+    max-width: 25rem
+  .primaryDecor_layer
+    top: 0
+    position: relative
+    transform: none
+
+.primaryContacts
+  max-width: calc( 100% - 4rem)
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%) translateY(50%)
+  background-color: $bg
+  border: 1px solid $dark20
+  box-shadow: 0px 1rem 2.5rem rgba(170, 170, 170, 0.2)
+  border-radius: 4rem
+  padding: 2rem 5rem
+  display: flex
+  gap: 6rem
+  align-items: center
+  @media (max-width: $breakpoint-max-xxl)
+    gap: 3rem
+  @media (max-width: $breakpoint-max-lg)
+    gap: 1.5rem
+  @media (max-width: $breakpoint-min-md)
+    flex-direction: column
+    gap: 1.5rem
+
+.primaryContacts_item_title
+  color: $dark50
+  margin-bottom: .5rem
+.primaryContacts_item
+  div
+    white-space: nowrap
+  @media (max-width: $breakpoint-max-lg)
+    text-align: center
+.primaryContacts_item + .primaryContacts_item
+  padding-left: 6rem
+  border-left: 1px solid $dark20
+  @media (max-width: $breakpoint-max-xxl)
+    padding-left: 3rem
+  @media (max-width: $breakpoint-max-lg)
+    padding: unset
+    border: none
+
+
+
+//reconstruction
+.reconstruction
+  margin-top: 10rem
   position: relative
+  width: calc( 100vw + 6rem + 60rem)
+  margin-left:  -3rem
+
+.reconstruction_text
+  padding-left: 5rem
+  display: flex
+  gap: 6rem
+  white-space: nowrap
+  color: $dark50
+.reconstruction_ribbon
+  margin-top: 1rem
+  margin-bottom: 1rem
+  height: 7rem
+  padding-left: 5rem
   display: flex
   align-items: center
+  gap: 6rem
+  margin-left: -60rem
+  white-space: nowrap
+  background: url(../img/reconstruction_template.png) left center
+  background-size: auto 100%
+  span
+    width: 24rem

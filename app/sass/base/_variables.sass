@@ -1,30 +1,53 @@
 @use "palitra" as *
 
 /*colors*/
-$white: $white-100
-
-$text_c_000: $white-100
-$text_c_100: $black-100
-$text_c_300: $black-300
+$white: #fff
+$light_gray: #F6F8FC
 
 
-$accent: $black-300
-$blue: $black-300
-$btnactive: $white-100
+$dark100: #2D4059
+$dark50: rgba($dark100, 0.5)
+$dark20: rgba($dark100, 0.2)
 
-$bg: $white-100
+$red100: #EA5455
+$green100: #00CCCC
+
+//semantic colors
+$accent: $red100
+$active: $dark100
+$active_2: $green100
+
+$text: $dark100
+$bg: $white
 
 /*fonts*/
-$fontMonserrat: 'Montserrat',FiraCode, Helvetica, san-serif
-$fontFira: 'FiraCode',Helvetica, san-serif
+$mainFont: 'MontserratAlternates','Montserrat', Helvetica, sans-serif
+$subFont: 'Montserrat','MontserratAlternates',Helvetica, sans-serif
 
-$fs_med: 500
-$fs_semi: 600
-$fs_extralight: 300
-$fs_regular: 400
-$fs_bold: 700
+$fw_extralight: 200
+$fw_light: 300
+$fw_regular: 400
+$fw_med: 500
+$fw_semi: 600
+$fw_bold: 700
+$fw_extrabold: 800
+$fw_black: 900
 
 /*template*/
 $gap: 1em
 
-$content_container_size: 1600px
+$breakpoint-min-sm: 580px //--breakpoint-sm
+$breakpoint-min-md: 770px //--breakpoint-MD
+$breakpoint-min-lg: 990px //--breakpoint-LG
+$breakpoint-min-xl: 1200px //--breakpoint-XL
+$breakpoint-min-xxl: 1330px //--breakpoint-XXL
+$breakpoint-min-extra: 1650px //--breakpoint-extra
+
+$breakpoint-max-sm: 579px //--breakpoint-sm
+$breakpoint-max-md: 769px //--breakpoint-sm
+$breakpoint-max-lg: 989px //--breakpoint-sm
+$breakpoint-max-xl: 1199px //--breakpoint-sm
+$breakpoint-max-xxl: 1329px //--breakpoint-sm
+$breakpoint-max-extra: 1649px //--breakpoint-sm
+
+$templateGap: 1.5rem

@@ -5,111 +5,99 @@
 .button
   display: inline-flex
   font-size: 1.4rem
-  line-height: 1.143
-  font-weight: $fs_regular
+  line-height: 1.2
+  font-weight: $fw_med
   align-items: center
   justify-content: center
-  padding-left: 1em
-  padding-right: 1em
+  padding: 1.143em 2.857em
   text-align: center
   white-space: nowrap
+  border-width: 2px
+  border-style: solid
+  border-radius: 4.071em
+  &:hover, &:active
+    border-width: 2px
+    border-style: solid
+    border-radius: 4.071em
+  &:focus
+    border-width: 2px
+    border-style: solid
+    border-radius: 4.071em
 
-
-
-.button-style1
-  $color_main: $text_c_300
-  $color_active: $text_c_000
-  position: relative
-  padding: 1.143em 4em
+.button-style-1
+  $color_main: $bg
+  $color_active: $active
+  $color-text: $color_active
   background-color: $color_main
-  color: $color_active
-  border-radius: 3.65em
-  overflow: hidden
-  &::before, &::after
-    pointer-events: none
-    content: ''
-    display: block
-    position: absolute
-    top: 0
-    bottom: 0
-    border: none
-  &::before
-    left: 0
-    right: calc(50% + 1px)
-    border-top: 5px solid $color_main
-    border-bottom: 5px solid $color_main
-    border-left: 5px solid $color_main
-    border-top-left-radius: 3.6em
-    border-bottom-left-radius: 3.6em
-  &::after
-    right: 0
-    left: calc(50% + 1px)
-    border-top: 1px solid $color_main
-    border-bottom: 1px solid $color_main
-    border-right: 1px solid $color_main
-    border-top-right-radius: 3.6em
-    border-bottom-right-radius: 3.6em
+  color: $color-text
+  border-color: currentColor
   &:hover, &:active
     background-color: $color_active
     color: $color_main
-    border-radius: 3.65em
+    border-color: $color_active
   &:focus
     background-color: $color_main
     color: $color_active
-    border-radius: 3.65em
+    border-color: currentColor
 
-.button-style2
-  $color_main: $text_c_300
-  $color_active: $text_c_000
-  position: relative
-  padding: 1.143em 4em
-  background-color: $color_active
-  color: $color_main
-  border-radius: 3.65em
-  overflow: hidden
-  &::before, &::after
-    pointer-events: none
-    content: ''
-    display: block
-    position: absolute
-    top: 0
-    bottom: 0
-    border: none
-  &::before
-    left: 0
-    right: calc(50% + 1px)
-    border-top: 5px solid $color_main
-    border-bottom: 5px solid $color_main
-    border-left: 5px solid $color_main
-    border-top-left-radius: 3.6em
-    border-bottom-left-radius: 3.6em
-  &::after
-    right: 0
-    left: calc(50% + 1px)
-    border-top: 1px solid $color_main
-    border-bottom: 1px solid $color_main
-    border-right: 1px solid $color_main
-    border-top-right-radius: 3.6em
-    border-bottom-right-radius: 3.6em
+.button-style-2
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: $color_main
+  color: $color-text
+  border-color: $color_main
   &:hover, &:active
-    background-color: $color_main
-    color: $color_active
-    border-radius: 3.65em
+    background-color: $color_active
+    color: $color-text
+    border-color:  $color_active
   &:focus
     background-color: $color_active
-    color: $color_main
-    border-radius: 3.65em
+    color: $color-text
+    border-color:  $color_active
 
+.button-style-3
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: $color_main
+  color: $color-text
+  border-color: $color_main
+  box-shadow: 0 1em 2em rgba($color_main, 0.4)
+  &:hover, &:active
+    background-color: $color-text
+    color: $color_active
+    border-color:  $color-text
+    box-shadow: none
+  &:focus
+    background-color: $color_main
+    color: $color-text
+    border-color: $color_main
 
 .button-svg
   font-size: 1em
-  width: 7.2em
-  height: 7.2em
-  border-radius: 50%!important
+  width: 4em
+  height: 4em
+  border-radius: 50%
   padding: 0
   svg
-    width: 3em
+    max-width: 3em
   &:hover, &:active
-    border-radius: 50%!important
+    border-radius: 50%
   &:focus
-    border-radius: 50%!important
+    border-radius: 50%
+.button-svg-style-1
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: $color_main
+  color: $color-text
+  box-shadow: 0 0 0px 1px $color-text, 0 0 0 2px $color_main
+  &:hover, &:active
+    background-color: $color_main
+    color: $color-text
+    box-shadow: 0 0 0px 10px rgba($color-text,0), 0 0 0 20px rgba($color_main,0)
+  &:focus
+    background-color: $color_main
+    color: $color-text
+
