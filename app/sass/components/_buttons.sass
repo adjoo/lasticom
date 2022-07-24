@@ -73,6 +73,21 @@
     background-color: $color_main
     color: $color-text
     border-color: $color_main
+.button-style-4
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: $color_active
+  color: $color-text
+  border-color: $color_active
+  &:hover, &:active
+    background-color: $color_main
+    color: $color-text
+    border-color:  $color_main
+  &:focus
+  background-color: $color_active
+  color: $color-text
+  border-color: $color_active
 
 .button-svg
   font-size: 1em
@@ -118,6 +133,9 @@
     background-color: $color-text
     color: $color_active
     border: 2px solid $color_main
+  @media(max-width: $breakpoint-max-lg)
+    width: 4em
+    height: 4em
 .button-svg-style-3
   width: 4.9em
   height: 4.9em
@@ -135,3 +153,52 @@
     background-color: transparent
     color: $color-text
     border: 2px solid $color-text
+  @media(max-width: $breakpoint-max-lg)
+    width: 4em
+    height: 4em
+.button-svg-style-4
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: $color_main
+  color: $color-text
+  border: 2px solid $color_main
+  &:hover, &:active
+    background-color: $color_active
+    color: $color-text
+    border: 2px solid $color_active
+  &:focus
+    background-color: $color_main
+    color: $color-text
+    border: 2px solid $color_main
+
+.button-svg-style-5
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: transparent
+  color: $active
+  border: 2px solid $active
+  &:hover, &:active
+    background-color: $color_main
+    color: $color-text
+    border: 2px solid $color_main
+  &:focus
+    background-color: transparent
+    color: $active
+    border: 2px solid $active
+.button-svg-style-6
+  $color_main: $accent
+  $color_active: $active
+  $color-text: $bg
+  background-color: transparent
+  color: $accent
+  border: 2px solid $accent
+  &:hover, &:active
+    background-color: $accent
+    color: $color-text
+    border: 2px solid $accent
+  &:focus
+    background-color: transparent
+    color: $accent
+    border: 2px solid $accent

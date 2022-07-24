@@ -8,8 +8,8 @@
   margin-top: 5rem
   padding-top: 4rem
   padding-bottom: 4rem
-  padding-left: 1rem
-  padding-right: 1rem
+  padding-left: 2rem
+  padding-right: 2rem
   border-radius: 4rem
   background: $active
   width: 178rem
@@ -23,28 +23,36 @@
     max-width: calc(#{$breakpoint-min-lg} - 2 * #{$templateGap})
 
 .footerLogo
-  min-width: 14rem
+  min-width: 16rem
 .footerContacts
   display: flex
-  align-items: center
   gap: 6rem
   white-space: nowrap
-  @media (max-width: $breakpoint-max-xxl)
-    gap: 4rem
-  @media (max-width: $breakpoint-max-xl)
-    display: none
+
 .footerContacts_item_title
+  margin-bottom: .5rem
 .footerPolicy
-  @media (max-width: $breakpoint-max-md)
-    display: none
+  text-align: center
 .footerActions
   display: flex
   gap: 2rem
-  .button-svg
-    width: 4em
-    height: 4em
-    svg
-      width: 1.8rem
-      height: 1.8rem
-  @media (max-width: $breakpoint-max-xl)
+@media (max-width: $breakpoint-max-xl)
+  .footer .row
+    flex-wrap: wrap
+  .footerContacts
+    gap: 3rem
+  .footerContacts_item_title
+  .footerPolicy
+    order: 1
+    margin: 2rem auto 0
+  .footerActions
     gap: 1rem
+@media (max-width: $breakpoint-max-lg)
+  .footerPolicy
+    order: 0
+    margin: unset
+@media (max-width: $breakpoint-max-md)
+  .footerPolicy
+    min-width: 70%
+    order: 1
+    margin: 2rem auto 0

@@ -10,16 +10,12 @@ $(document).ready(async function () {
 
     $(popupLinkClassSelector).magnificPopup({
         type: 'inline',
-
         fixedContentPos: true,
         fixedBgPos: true,
         mainClass: popupWindowClass,
-
         overflowY: 'auto',
-
         closeBtnInside: true,
         preloader: false,
-
         midClick: true,
         removalDelay: 600,
         zoom: {
@@ -27,6 +23,8 @@ $(document).ready(async function () {
             duration: 600
         },
     });
+
+    //$.magnificPopup.open({items: {src: '#popup_form_small'}})
 
     //плавный скролл по странице
 
@@ -79,10 +77,104 @@ $(document).ready(async function () {
         });
         return false;
     });
-/*
-    let response = await fetch('3d/multilangLanding.csv').then(r=>console.log('eew')).catch(e=>{console.log(e)})
-    let csv = await response.text(); // скачиваем как Blob-объект
-    console.log('asdfadf',response)*/
+
+    //jcarousel инициализация*************************************
+    const DEVEICE_MAX_WIDTH = 700
+    const CAROUSELITEM = "#portfolioCarousel";
+
+    $(CAROUSELITEM).jcarousel({
+        wrap: 'circular'
+    });
+
+    let windowWidth = document.body.clientWidth
+
+    const carouselControlsOn = (direction) => {
+        console.log(direction, windowWidth)
+        switch (direction) {
+            case 'left':
+                $(CAROUSELITEM).jcarousel('scroll', '+=1');
+                break;
+            case 'right':
+                $(CAROUSELITEM).jcarousel('scroll', '-=1');
+                break;
+        }
+    }
+    const carouselControlsOff = () => {
+    }
+
+    let swipeHandler = (windowWidth < DEVEICE_MAX_WIDTH) ? carouselControlsOn : carouselControlsOff
+
+
+    $(CAROUSELITEM).swipe(
+        carouselControlsOn,
+        {
+            preventDefault: false,
+            mouse: false,
+            pen: true,
+            distance: 50
+
+        })
+
+    window.addEventListener('orientationchange',
+        () => {
+            setTimeout(() => {
+                    windowWidth = document.body.clientWidth;
+
+                    if (windowWidth < DEVEICE_MAX_WIDTH) {
+                        $(CAROUSELITEM).jcarousel({
+                            wrap: 'circular'
+                        });
+                        $(CAROUSELITEM).swipe(
+                            carouselControlsOn,
+                            {
+                                preventDefault: false,
+                                mouse: false,
+                                pen: true,
+                                distance: 50
+
+                            })
+
+                    } else {
+                        $(CAROUSELITEM).jcarousel('destroy');
+                    }
+
+
+                }
+                , 0)
+        }
+    )
+    window.addEventListener("resize",
+        () => {
+            setTimeout(() => {
+                    windowWidth = document.body.clientWidth;
+
+                    if (windowWidth < DEVEICE_MAX_WIDTH) {
+                        $(CAROUSELITEM).jcarousel({
+                            wrap: 'circular'
+                        });
+                        $(CAROUSELITEM).swipe(
+                            carouselControlsOn,
+                            {
+                                preventDefault: false,
+                                mouse: false,
+                                pen: true,
+                                distance: 50
+
+                            })
+
+                    } else {
+                        $(CAROUSELITEM).jcarousel('destroy');
+                    }
+
+
+                }
+                , 0)
+        }
+
+    , false);
+
+
+
 
 
 })

@@ -1,2 +1,72 @@
 //стили Выпадающих окон общие и в частности
 @use "../base/variables" as *
+@use "../base/transitions" as *
+@use "../components/buttons" as *
+.mfp_popup_window
+  .mfp-container
+    opacity: 0
+    transition: all .2s ease
+    transform: scaleY(0.9)
+    transform-origin: center
+  &.mfp-bg
+    background-color: rgba($active, .01)
+    backdrop-filter: blur(0rem)
+    opacity: 0
+    transition: opacity .3s ease 0s
+  &.mfp-ready
+    .mfp-container
+      opacity: 1
+      transform: scaleY(1)
+      transform-origin: center
+      transition: all .2s ease 0s
+    &.mfp-bg
+      opacity: 1
+      background-color: rgba($active, .9)
+      backdrop-filter: blur(.4rem)
+      transition: opacity .3s ease 0s
+  &.mfp-removing
+    .mfp-container
+      transform: scaleY(0.6)
+      opacity: 0
+    &.mfp-bg
+      opacity: 0
+.popup_window
+  position: relative
+  margin: auto
+  width: 38em
+  max-width: 38em
+  min-height: 20em
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  background-color: $bg
+  padding: 4em 4rem 2rem
+  border-radius: 2em
+  box-shadow: 0em 0em 2em -.5em rgba($accent,.4)
+  background: url(../img/form_bg.png) center center no-repeat
+  background-size: cover
+  .mfp-close
+    @extend .button
+    @extend .button-svg
+    @extend .button-svg-style-4
+    @extend .transition_fast
+    content: url(../img/svg/icon-cross.svg)
+    padding: .5rem
+    opacity: 1
+    right: 4rem
+    top: 4rem
+  form
+    .description
+      margin: 1.6rem auto
+      text-align: center
+      color: rgba($active, .5)
+  input[type='submit']
+    width: 100%
+
+.formLogo
+  img
+    margin: auto
+
+.popup_window__title
+  margin-right: auto

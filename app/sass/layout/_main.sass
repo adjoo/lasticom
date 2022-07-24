@@ -19,6 +19,7 @@
   @media (max-width: $breakpoint-max-xl)
     padding-left: 3.5rem
 
+
 .primaryHeaders
   color: $bg
   min-height: inherit
@@ -27,6 +28,9 @@
   justify-content: center
   width: 73rem
   max-width: 50%
+  @media (max-width: $breakpoint-max-lg)
+    h1 span
+      display: block
 .primaryHeaders_description
   line-height: 2em
 .primaryDecor
@@ -57,12 +61,11 @@
 //for mobile:
 @media (max-width: $breakpoint-max-lg)
   .primary
-
     min-height: unset
     padding: 17rem 2rem 8rem
     background-image: radial-gradient(ellipse 100% 50% at top,$accent 0%,$active 60%)
     width: auto
-    max-width: calc(#{$breakpoint-min-lg} - 2 * #{$templateGap})
+    max-width: calc(100vw - 6rem)
     @media (max-width: $breakpoint-min-md)
       padding: 17rem 2rem 13rem
       margin-bottom: 13rem
@@ -74,14 +77,16 @@
     width: auto
   .primaryDecor
     min-height: unset
-    top: 15rem
+    height: 17rem
     left: 50%
-    transform: translateX(-50%) translateY(-100%)
-    max-width: 25rem
+    transform: translateX(-50%)
+    overflow: hidden
   .primaryDecor_layer
-    top: 0
-    position: relative
-    transform: none
+    top: unset
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+
 
 .primaryContacts
   max-width: calc( 100% - 4rem)
@@ -171,7 +176,6 @@
   @media (max-width: $breakpoint-max-lg)
     grid-template-columns: 1fr 1fr
     grid-template-rows: 1fr 1fr
-
 .portfolioItem
 .portfolioItem_preview
   border-radius: 2rem
@@ -183,3 +187,33 @@
   margin-top: 2rem
 .portfolioItem_description
   margin-top: .5rem
+
+@media (max-width: $breakpoint-min-md)
+  .portfolioCarousel
+    position: relative
+    overflow-x: hidden
+    margin-left: -1.5rem
+    padding-left: 1.5rem
+    &::before, &::after
+      display: block
+      content: ''
+      position: absolute
+      z-index: 1
+      top: 0
+      bottom: 0
+      width: 1.5rem
+    &::before
+      right: 0
+      background-image: linear-gradient(to left, $bg, transparent)
+    &::after
+      left: 0
+      background-image: linear-gradient(to right, $bg, transparent)
+  .portfolioItems
+    margin-top: 2rem
+    position: relative
+    display: flex
+    width: 10000%
+    height: 100%
+  .portfolioItem
+    width: .9%
+    max-width: .9%

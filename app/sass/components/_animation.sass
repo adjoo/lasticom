@@ -29,3 +29,22 @@
     transform: translateX(30rem)
   50%
     transform: translateX(45rem)
+
+$color_main: $accent
+$color_active: $active
+$color-text: $bg
+.hamburgerAnimation
+  animation-duration: 5s
+  animation-delay: 5s
+  animation-name: hamburgerAnimation
+  animation-iteration-count: infinite
+  animation-direction: normal
+  animation-timing-function: ease-out
+@keyframes hamburgerAnimation
+  0%, 20%
+    box-shadow: 0 0 0px 1px $color-text, 0 0 0 2px $color_main, 0 0 0px 1px $color-text, 0 0 0 2px $color_main
+  10%
+    box-shadow: 0 0 0px 1px $color-text, 0 0 0 2px $color_main, 0 0 10px 10px rgba($color-text,0), 0 0 15px 15px rgba($color_main,0)
+  20%
+    box-shadow: 0 0 0px 1px $color-text, 0 0 0 2px $color_main, 0 0 10px 10px rgba($color-text,0), 0 0 5px 5px rgba($color_main,0)
+

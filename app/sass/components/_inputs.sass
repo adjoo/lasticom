@@ -5,44 +5,44 @@ form
     max-width: 48ch
 
 input[type='text']
-  font-size: 1.4em
+  font-size: 1.6rem
   line-height: 1
   width: 100%
-  padding: .2em 0
+
 
 .input_style_1
   position: relative
   display: inline-flex
-  min-height: 4.6em
+  min-height: 5rem
   width: 100%
-  max-width: 41em
+  max-width: 40em
   border-radius: 2em
   align-items: center
-  background: $bg
-  box-shadow: 0 0 2em 1px $bg
-  border: 1px solid $active
+  background: $light_gray
+  border: 1px solid $light_gray
   padding: 0 2em
-  margin-top: 1em
+  margin-top: 3em
   margin-bottom: 2em
+  cursor: pointer
+  font-family: $subFont
   span
     position: absolute
-    left: 1em
-    bottom: 100%
+    top: -3rem
+    left: 0
     font-weight: $fw_med
     line-height: 1
-    display: inline-block
-    background: $bg
-    padding: 0 6px 6px
-    margin-bottom: -8px
-    color: $active
+    font-size: 1.8rem
   input[type='text']
     color: $active
     font-weight: $fw_med
     &::placeholder
       font-weight: $fw_regular
-      color: $active
+      color: rgba($active, .5)
   &:hover
-    border: 1px solid $accent
+    border: 1px solid $active
+
+
+
 
 
 
