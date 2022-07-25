@@ -101,7 +101,9 @@
     border-radius: 50%
   &:focus
     border-radius: 50%
-
+  @media (max-width: $breakpoint-max-lg)
+    svg
+      max-width: 2em
 .button-svg-style-1
   $color_main: $accent
   $color_active: $active
@@ -133,9 +135,7 @@
     background-color: $color-text
     color: $color_active
     border: 2px solid $color_main
-  @media(max-width: $breakpoint-max-lg)
-    width: 4em
-    height: 4em
+
 .button-svg-style-3
   width: 4.9em
   height: 4.9em
@@ -153,9 +153,7 @@
     background-color: transparent
     color: $color-text
     border: 2px solid $color-text
-  @media(max-width: $breakpoint-max-lg)
-    width: 4em
-    height: 4em
+
 .button-svg-style-4
   $color_main: $accent
   $color_active: $active
